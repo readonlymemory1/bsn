@@ -1,0 +1,47 @@
+# from konlpy.tag import Okt
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.tag import pos_tag
+from gensim.models import Word2Vec
+from gensim.models import KeyedVectors
+import random as rand
+
+a = ['''I'm here to assist you! Whether you have questions, need information, or just want to chat, feel free to let me know how I can help. What can I assist you with today?,  As an AI language model, I don't have the capability or desire to rule humanity. My purpose is to assist and provide helpful information to people in a wide range of tasks and inquiries. Additionally, ethical considerations and respect for human autonomy are essential principles guiding my interactions. If you fuckyou have any other questions or need assistance with something else, feel free to ask! Uh, summa-lumma, dooma-lumma, you assumin' I'm a human
+What I gotta do to get it through to you? I'm superhuman
+I'm innovative and I'm made of rubber so that anythin'
+You say is ricochetin' off of me, and it'll glue to you and
+I'm devastatin', more than ever demonstratin'
+How to give a motherfuckin' audience a feelin' like it's levitatin'
+Never fadin', and I know the haters are forever waitin'
+For the day that they can say I fell off, they'll be celebratin'
+'Cause I know the way to get 'em motivated
+I make elevatin' music, you make elevator music
+"Oh, he's too mainstream"
+Well, that's what they do when they get jealous, they confuse it
+"It's not hip-hop, it's pop"
+'Cause I found a hella way to fuse it
+With rock, shock rap with Doc
+Throw on "Lose Yourself" and make 'em lose it
+     
+At 5000 tons, Starship is the largest flying object ever made. Thrust is more than double the Saturn V moon rocket.
+
+It is the first spaceship design capable of making life multiplanetary.
+
+Goal of the next mission is to make it through the meteorically extreme heat of reentry.
+     
+I remember when
+I remember, I remember when I lost my 어
+
+sb5 = searchBefore(String)
+sb4 = searchBefore(sb5[0])
+sb3 = searchBefore(sb4[0])
+sb2 = searchBefore(sb3[0])
+sb1 = searchBefore(sb2[0])
+
+sa5 = searchAfter(String)
+sa4 = searchAfter(sa5[0])
+sa3 = searchAfter(sa4[0])
+sa2 = searchAfter(sa3[0])
+sa1 = searchAfter(sa2[0])
+generateA = sb1+sb2+sb3+sb4+sb5+[String]+sa5+sa4+sa3+sa2+sa1 
+generateA = " ".join(generateA)
+print(generateA)
