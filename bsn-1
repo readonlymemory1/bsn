@@ -5,31 +5,63 @@ from gensim.models import Word2Vec
 from gensim.models import KeyedVectors
 import random as rand
 
-a = ['''I'm here to assist you! Whether you have questions, need information, or just want to chat, feel free to let me know how I can help. What can I assist you with today?,  As an AI language model, I don't have the capability or desire to rule humanity. My purpose is to assist and provide helpful information to people in a wide range of tasks and inquiries. Additionally, ethical considerations and respect for human autonomy are essential principles guiding my interactions. If you fuckyou have any other questions or need assistance with something else, feel free to ask! Uh, summa-lumma, dooma-lumma, you assumin' I'm a human
-What I gotta do to get it through to you? I'm superhuman
-I'm innovative and I'm made of rubber so that anythin'
-You say is ricochetin' off of me, and it'll glue to you and
-I'm devastatin', more than ever demonstratin'
-How to give a motherfuckin' audience a feelin' like it's levitatin'
-Never fadin', and I know the haters are forever waitin'
-For the day that they can say I fell off, they'll be celebratin'
-'Cause I know the way to get 'em motivated
-I make elevatin' music, you make elevator music
-"Oh, he's too mainstream"
-Well, that's what they do when they get jealous, they confuse it
-"It's not hip-hop, it's pop"
-'Cause I found a hella way to fuse it
-With rock, shock rap with Doc
-Throw on "Lose Yourself" and make 'em lose it
-     
-At 5000 tons, Starship is the largest flying object ever made. Thrust is more than double the Saturn V moon rocket.
+a = ['''data'''] #데이터 
+# for qsent in sent_tokenize(q[0]):
+#     None
 
-It is the first spaceship design capable of making life multiplanetary.
+# for asent in sent_tokenize(a[0]):
+#     None
+# model = Word2Vec(sentences=result, vector_size=100, window=5, min_count=5, workers=4, sg=0)
+# for i in range(len(q)):
+#     qword= word_tokenize(q[i])
+#     aword= word_tokenize(a[i])
 
-Goal of the next mission is to make it through the meteorically extreme heat of reentry.
-     
-I remember when
-I remember, I remember when I lost my 어
+# print(pos_tag(qword))
+manyb = []
+result = []
+# otk = Okt()
+aword = word_tokenize(a[0])
+# aword = otk.morphs(a[2])
+def searchAfter(text):
+    searchText = list(filter(lambda e:aword[e] == text, range(len(aword))))
+    after = []
+    for j in range(len(searchText)):
+        try:
+            after.append(aword[searchText[j]+1])
+        except:
+            after.append(["fuck"])
+    return [manyText(after)]
+        # afterCount = list(filter(lambda e:after[e] == after[j], range(len(after))))
+    
+def searchBefore(text):
+    searchText = list(filter(lambda e:aword[e] == text, range(len(aword))))
+    before = []
+    for j in range(len(searchText)):
+        before.append(aword[searchText[j]-1])
+    return [manyText(before)] 
+
+def manyText(text):
+    global manyb
+    global result
+    manyb = []
+    for i in range(len(text)):
+        manyb.append(text.count(text[i]))
+        # manyb = set(manyb)
+        # text = set(text)
+        manyb = list(manyb)
+    # try:
+
+    r = rand.randrange(0, 3)
+    if r ==2:
+        ra = rand.randrange(0, len(text))
+        return text[ra]
+        
+    else:
+        result = text[manyb.index(max(manyb))]
+        return result
+    #many.reverse()
+    
+String = "I" #중심단어
 
 sb5 = searchBefore(String)
 sb4 = searchBefore(sb5[0])
